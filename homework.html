@@ -1,0 +1,96 @@
+<html>
+<!-- bootstrap.html  참고하기-->
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	<title>희진이 첫번째 숙제</title>
+	<style> 
+		span{
+			font-size: 15px;
+		}
+
+		p{
+			font-size: 13px;
+		}
+
+		.class2{
+			width: 400px;
+			height: 200px;
+			display: flex;
+			margin: 50px auto 0 auto; 
+
+			flex-direction: column;
+			align-items: left;
+			justify-content: center;
+		}
+
+		.class1 {
+			width: 400px;
+			height: 350px;
+			margin: 50px auto 0 auto; 
+			/*마진은 바깥쪽, 페딩은 안쪽*/
+			padding: 50px 0 0 0;
+			border: 1px solid #000;
+			/*마진의 네가지 속성을 순서대로 위에서 50떨어짐. auto 는 자동정렬해서 가운데로 맞춰준다 */
+
+			/*border 가능도 있음. 보더는 테두리를 의미한다.*/
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<div class="class1">
+		<div class="class2">
+			<img src="C:\Users\user\Desktop\sparta\homework\dog-panting-1024x683.jpg" width="400px">
+			<h1>양초를 팝니다 <span>가격: 3,000/개</span></h1>
+
+			<p>이 양초는 사실 특별한 힘을 가지고 있어요. 양초를 켜고 소원을 빌면 짜자잔 뭐든지 이뤄지게 된답니다. 하나사가세요! 대나무 향이 아주 좋아요</p>
+
+
+
+		</div>
+
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">@</span>
+		</div>
+		<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+	</div>
+
+	<div class="input-group mb-3">
+		<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+		<div class="input-group-append">
+			<span class="input-group-text" id="basic-addon2">@example.com</span>
+		</div>
+	</div>
+
+	<label for="basic-url">Your vanity URL</label>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+		</div>
+		<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+	</div>
+
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text">$</span>
+		</div>
+		<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+		<div class="input-group-append">
+			<span class="input-group-text">.00</span>
+		</div>
+	</div>
+
+	<div class="input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text">With textarea</span>
+		</div>
+		<textarea class="form-control" aria-label="With textarea"></textarea>
+	</div>
+
+
+
+</body>
+</html>
