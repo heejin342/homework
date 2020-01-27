@@ -125,6 +125,11 @@
 				return;
 			}
 
+			if((regPhone.test($('#PN').val())==false)){
+				alert('전화번호 형식이 틀렸습니다 010-0000-0000 형태로 입력하세요');
+				$('#PN').focus();
+				return;
+			}
 			if((regPhone.test($('#PN').val())==true)){
 				alert('주문완료!!');
 				make_table();
@@ -132,11 +137,6 @@
 				return;
 			}
 
-			if((regPhone.test($('#PN').val())==false)){
-				alert('전화번호 형식이 틀렸습니다 010-0000-0000 형태로 입력하세요');
-				$('#PN').focus();
-				return;
-			}
 		}
 
 	</script>
