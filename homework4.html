@@ -67,6 +67,33 @@
 
 	<script type="text/javascript">	
 
+		$(document).ready(function(){
+			$('#table_body').html('');
+			listing();
+		});
+
+		function listing() {
+			$.ajax({
+				type: "GET",
+				url: "http://spartacodingclub.shop/order",
+				data: {},
+				success: function(response){
+					let orders = response['orders'];
+					for (let i = 0; i < 10; i++) {
+						make_table_list(orders[i]['name'],orders[i]['count'],orders[i]['address'],orders[i]['phone'])
+					}
+				}
+			})
+		}
+
+		function make_table_list(name, count, address, phone) {
+			let temp_html =
+			'<tr><td>' + name + '</td>+<td>not selected</td>+<td>' + count + '</td>+<td>' +address + '</td>+<td>' + phone + '</td></tr>';
+
+			$('#table_body').append(temp_html);
+		}
+
+
 		function init(){
 
 			$('#name').val("");
@@ -86,8 +113,8 @@
 			let addr = $('#addr').val();
 			let PN = $('#PN').val();
 
-			let temp_html = '<tr><td>' + name + '</td>+<td>' + sort + '</td>+<td>' +cnt + '</td>+<td>' + addr + '</td>+<td>' + PN +'</td>+</tr>';
-			$('#table_body').append(temp_html);
+			let temp_html2 = '<tr><td>' + name + '</td>+<td>' + sort + '</td>+<td>' +cnt + '</td>+<td>' + addr + '</td>+<td>' + PN +'</td>+</tr>';
+			$('#table_body').append(temp_html2);
 		}
 
 		function ccclick(){
@@ -135,7 +162,6 @@
 				init();
 				return;
 			}
-
 		}
 
 	</script>
